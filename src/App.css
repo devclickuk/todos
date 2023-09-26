@@ -1,0 +1,79 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
+    height: 100vh;
+}
+
+.listContainer {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--cardBackgroundColor);
+    padding: var(--padding);
+    padding-bottom: 0px;
+    border-radius: var(--borderRadius);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
+    background-color: #fff;
+    border-radius: var(--borderRadius);
+    margin-bottom: 1rem;
+}
+
+.itemText {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.itemDeleteIcon {
+    cursor: pointer;
+    color: var(--altColor);
+    font-weight: bold;
+    margin-left: var(--margin);
+}
+
+.itemDeleteIcon:hover {
+    color: var(--altColorLight);
+}
+
+.addContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: var(--padding);
+    border-radius: var(--borderRadius);
+    background-color: var(--cardBackgroundColor);
+}
+
+.addInput {
+    width: 100%;
+    padding: var(--padding);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--borderRadius);
+    outline: none;
+}
+
+.addButton {
+    cursor: pointer;
+    padding: var(--padding);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--borderRadius);
+    outline: none;
+    background-color: #fff;
+    margin-left: 10px;
+}
