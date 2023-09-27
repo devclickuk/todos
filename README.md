@@ -15,6 +15,8 @@ This is a simple React Todo app built using Redux and Redux Toolkit. It allows y
 - React
 - Redux
 - Redux Toolkit
+- uuid V4 (for generating unique IDs)
+- redux-persist (for persisting the Redux store to local storage)
 
 ## Getting Started
 
