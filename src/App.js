@@ -8,10 +8,7 @@ function App() {
   const tasks = useSelector((state) => state.tasks)
   const textRef = useRef()
 
-  console.log('tasks', tasks)
-
   const handleAdd = () => {
-    console.log('handle add clicked')
     const text = textRef.current.value
     if (text === '') {
       return

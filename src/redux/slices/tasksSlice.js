@@ -22,7 +22,6 @@ const tasksSlice = createSlice({
     ],
     reducers: {
         addTask: (state, action) => {
-            console.log('adding new task')
             const newTask = {
                 id: uuidv4(),
                 title: action.payload.title,
@@ -31,14 +30,12 @@ const tasksSlice = createSlice({
             state.push(newTask);
         },
         toggleTask: (state, action) => {
-            console.log('toggling task')
             const task = state.find((task) => task.id === action.payload.id);
             if (task) {
                 task.completed = !task.completed;
             }
         },
         deleteTask: (state, action) => {
-            console.log('deleting task')
             const index = state.findIndex((task) => task.id === action.payload.id);
             if (index !== -1) {
                 state.splice(index, 1);
