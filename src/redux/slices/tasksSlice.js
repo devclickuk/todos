@@ -25,11 +25,20 @@ const tasksSlice = createSlice({
     ],
     reducers: {
         addTask: (state, action) => {
+
+            let orderNum = 0;
+            state.map((task) => {
+                if (task.order > orderNum) {
+                    orderNum = task.order;
+                }
+                return task;
+            })
+
             const newTask = {
                 id: uuidv4(),
                 title: action.payload.title,
                 completed: false,
-                order: state.length + 1,
+                order: orderNum + 1,
             };
             const completedTasks = state.filter((task) => task.completed);
             completedTasks.push(newTask);
