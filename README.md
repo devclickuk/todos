@@ -9,6 +9,9 @@ This is a simple React Todo app built using Redux and Redux Toolkit. It allows y
 - Add new tasks
 - Delete tasks
 - Toggle task completion
+- Tasks are persisted to local storage
+- Tasks are displayed by completion status
+- Tasks Remember there order on toggle of completion status
 
 ## Technologies Used
 
