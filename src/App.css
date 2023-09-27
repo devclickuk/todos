@@ -33,16 +33,33 @@
     font-weight: bold;
 }
 
-.itemDeleteIcon {
-    cursor: pointer;
-    color: var(--altColor);
-    font-weight: bold;
+.itemComplete {
+    text-decoration: line-through;
+    color: var(--grayedOut);
+}
+
+.itemButtonsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--margin);
     margin-left: var(--margin);
 }
 
-.itemDeleteIcon:hover {
-    color: var(--altColorLight);
+.itemUndoIcon {
+    cursor: pointer;
 }
+
+.itemToggleIcon {
+    cursor: pointer;
+    color: var(--greenColor);
+}
+
+.itemDeleteIcon {
+    cursor: pointer;
+    color: var(--altColor);
+}
+
 
 .addContainer {
     display: flex;
