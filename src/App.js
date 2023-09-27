@@ -49,6 +49,11 @@ function App() {
             </div>
           </div>
         ))}
+        {tasks.length === 0 && (
+          <div className='emptyListContainer'>
+            <span className="emptyListText">No Tasks</span>
+          </div>
+        )}
       </div>
       <div className="addContainer">
         <input

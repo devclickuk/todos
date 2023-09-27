@@ -34,6 +34,11 @@ const tasksSlice = createSlice({
             if (task) {
                 task.completed = !task.completed;
             }
+            const completedTasks = state.filter((task) => task.completed);
+            const incompleteTasks = state.filter((task) => !task.completed);
+            state.length = 0;
+            incompleteTasks.forEach((task) => state.push(task));
+            completedTasks.forEach((task) => state.push(task));
         },
         deleteTask: (state, action) => {
             const index = state.findIndex((task) => task.id === action.payload.id);
