@@ -1,35 +1,23 @@
 import { useState, useRef, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import './App.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { addTask, deleteTask } from './redux/slices/tasksSlice';
 
 function App() {
-  const [todos, setTodos] = useState([])
+  const dispatch = useDispatch()
+  const tasks = useSelector((state) => state.tasks)
   const textRef = useRef()
 
-  useEffect(() => {
-    setTodos([
-      {
-        id: uuidv4(),
-        text: 'Buy milk',
-        complete: false
-      },
-      {
-        id: uuidv4(),
-        text: 'Buy eggs',
-        complete: false
-      },
-      {
-        id: uuidv4(),
-        text: 'Buy bread',
-        complete: false
-      },
-    ])
-  }, [])
+  console.log('tasks', tasks)
 
   const handleAdd = () => {
     console.log('handle add clicked')
-    const id = uuidv4()
-    setTodos([...todos, { id: id, text: textRef.current.value }])
+    const text = textRef.current.value
+    if (text === '') {
+      return
+    }
+    dispatch(addTask({ title: text }))
     resetTextValue()
   }
 
@@ -38,16 +26,16 @@ function App() {
   }
 
   const handleDelete = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id))
+    dispatch(deleteTask({ id }))
   }
 
   return (
     <div className="App">
       <div className="listContainer">
-        {todos.map((todo) => (
-          <div key={todo.id} className="listItem">
-            <span className="itemText">{todo.text}</span>
-            <div className="itemDeleteIcon" onClick={() => handleDelete(todo.id)}>X</div>
+        {tasks.map((task) => (
+          <div key={task.id} className="listItem">
+            <span className="itemText">{task.title}</span>
+            <div className="itemDeleteIcon" onClick={() => handleDelete(task.id)}>X</div>
           </div>
         ))}
       </div>
