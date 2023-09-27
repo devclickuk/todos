@@ -91,7 +91,7 @@
     border: none;
     border-radius: var(--borderRadius);
     outline: none;
-    background-color: #fff;
+    background-color: var(--whiteColor);
     margin-left: 10px;
 }
 
@@ -104,9 +104,9 @@
 }
 
 .emptyListText {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: var(--altColorLight);
+    color: var(--whiteColor);
     text-align: center;
     padding: var(--padding);
     padding-bottom: calc(var(--padding) * 2);

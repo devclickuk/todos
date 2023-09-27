@@ -8,6 +8,7 @@
   --altColor: coral;
   --greenColor: green;
   --grayedOut: lightgray;
+  --whiteColor: white;
 }
 
 * {
@@ -21,9 +22,6 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: aliceblue;
-}
-
-body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -32,10 +30,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 ::-webkit-scrollbar {
   width: 10px;
