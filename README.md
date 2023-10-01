@@ -4,6 +4,10 @@
 
 This is a simple React Todo app built using Redux and Redux Toolkit. It allows you to add, delete, and toggle the completion status of tasks. The state management is handled efficiently using Redux Toolkit's `createSlice` feature.
 
+## Demo
+
+You can view a live demo of this project here: [https://devclickuk.github.io/todos](https://devclickuk.github.io/todos)
+
 ## Features
 
 - Add new tasks
