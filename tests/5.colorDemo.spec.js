@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Color Demo', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('http://localhost:3000/colorDemo');
+        await page.goto('http://localhost:3000/todos/colorDemo');
     });
 
     test('check the background changes color', async ({ page }) => {

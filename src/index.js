@@ -17,8 +17,8 @@ root.render(
             <PersistGate loading={null} persistor={persistor}>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<Todos />} />
-                        <Route path="/colorDemo" element={<ColorDemo />} />
+                        <Route path="todos/" element={<Todos />} />
+                        <Route path="todos/colorDemo/" element={<ColorDemo />} />
                     </Routes>
                 </BrowserRouter>
             </PersistGate>
