@@ -6,7 +6,7 @@ This is a simple React Todo app built using Redux and Redux Toolkit. It allows y
 
 ## Demo
 
-You can view a live demo of this project here: [https://devclickuk.github.io/todos](https://devclickuk.github.io/todos)
+You can view a live demo of this project here: [https://devclickuk.github.io](https://devclickuk.github.io)
 
 ## Features
 

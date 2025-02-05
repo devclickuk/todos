@@ -1,12 +1,12 @@
 import { useRef } from 'react'
-import './App.css';
+import '../styles/todos.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { addTask, deleteTask, toggleTask } from './redux/slices/tasksSlice';
+import { addTask, deleteTask, toggleTask } from '../redux/slices/tasksSlice';
 import { RxCross2 } from 'react-icons/rx'
 import { BsCheckLg } from 'react-icons/bs'
 import { CiUndo } from 'react-icons/ci'
 
-function App() {
+function Todos() {
     const dispatch = useDispatch()
     const tasks = useSelector((state) => state.tasks)
     const textRef = useRef()
@@ -74,4 +74,4 @@ function App() {
     );
 }
 
-export default App;
+export default Todos;

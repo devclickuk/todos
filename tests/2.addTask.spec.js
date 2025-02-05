@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Add Task', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('http://localhost:3000/todos');
+        await page.goto('http://localhost:3000');
     });
 
     // check that there are 3 list items
