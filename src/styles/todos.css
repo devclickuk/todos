@@ -25,7 +25,6 @@
     padding: var(--padding);
     background-color: #fff;
     border-radius: var(--borderRadius);
-    margin-bottom: 1rem;
 }
 
 .itemText {
@@ -61,16 +60,15 @@
 }
 
 
-.addContainer {
+.container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
     padding: var(--padding);
     border-radius: var(--borderRadius);
     background-color: var(--cardBackgroundColor);
+    gap: var(--margin);
 }
 
 .addInput {
@@ -92,7 +90,6 @@
     border-radius: var(--borderRadius);
     outline: none;
     background-color: var(--whiteColor);
-    margin-left: 10px;
 }
 
 .emptyListContainer {

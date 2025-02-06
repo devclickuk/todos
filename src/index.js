@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Todos from './pages/Todos';
-import ColorDemo from './pages/ColorDemo';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,7 +17,6 @@ root.render(
                 <BrowserRouter>
                     <Routes>
                         <Route path="todos/" element={<Todos />} />
-                        <Route path="todos/colorDemo/" element={<ColorDemo />} />
                     </Routes>
                 </BrowserRouter>
             </PersistGate>
