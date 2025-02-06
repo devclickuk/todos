@@ -37,22 +37,24 @@ function Todos() {
 
     return (
         <div className="App">
-            <Container orientation='vertical' testid="listContainer">
-                {tasks.map((task, index) => (
-                    <TaskContainer
-                        key={task.id}
-                        taskid={task.id}
-                        index={index}
-                        handleToggle={handleToggle}
-                        handleDelete={handleDelete}
-                        completed={task.completed}
-                        title={task.title}
-                    />
-                ))}
-                {tasks.length === 0 && (
-                    <EmptyTasks />
-                )}
-            </Container>
+            {tasks.length > 0 ? (
+                <Container orientation='vertical' testid="listContainer">
+                    {tasks.map((task, index) => (
+                        <TaskContainer
+                            key={task.id}
+                            taskid={task.id}
+                            index={index}
+                            handleToggle={handleToggle}
+                            handleDelete={handleDelete}
+                            completed={task.completed}
+                            title={task.title}
+                        />
+                    ))}
+                </Container>
+            ) : (
+                <EmptyTasks message="No Tasks" variant='primary' />
+            )}
+
             <Container orientation='horizontal' testid="addContainer">
                 <TextInput handleAdd={handleAdd} textRef={textRef} size='medium' variant='primary' placeholder='Add a task' />
                 <Button onClick={handleAdd} size='medium' variant='primary'>Add</Button>

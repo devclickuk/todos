@@ -11,8 +11,19 @@ const meta: Meta<typeof EmptyTasks> = {
 }
 
 export default meta;
+
 type Story = StoryObj<typeof EmptyTasks>;
 
-export const Default: Story = {
-    args: {},
+export const Primary: Story = {
+    args: {
+        message: 'No Tasks',
+        variant: 'primary',
+    },
+};
+
+export const Secondary: Story = {
+    args: {
+        message: 'No Tasks',
+        variant: 'secondary',
+    },
 };
