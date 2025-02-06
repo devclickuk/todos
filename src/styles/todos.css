@@ -106,5 +106,4 @@
     color: var(--whiteColor);
     text-align: center;
     padding: var(--padding);
-    padding-bottom: calc(var(--padding) * 2);
 }
